@@ -2,18 +2,18 @@ namespace DIO.Series
 {
 	public enum Genero
 	{
-		Acao = 1,
-		Aventura = 2,
-		Comedia = 3,
-		Documentario = 4,
-		Drama = 5,
-		Espionagem = 6,
-		Faroeste = 7,
-		Fantasia = 8,
-		Ficcao_Cientifica = 9,
-		Musical = 10,
-		Romance = 11,
-		Suspense = 12,
-		Terror = 13
+		Rock = 1,
+		Pop = 2,
+		Funk = 3,
+		Pagode = 4,
+		Romantica = 5,
+		Samba = 6,
+		Forró = 7,
+		Axé = 8,
+		Punk = 9,
+		Eletrônica = 10,
+		Emo = 11,
+		Progressivo = 12,
+		Dance = 13
 	}
 }

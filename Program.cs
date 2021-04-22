@@ -14,7 +14,7 @@ namespace DIO.Series
 				switch (opcaoUsuario)
 				{
 					case "1":
-						ListarSeries();
+						ListarMusicas();
 						break;
 					case "2":
 						InserirSerie();
@@ -39,13 +39,13 @@ namespace DIO.Series
 				opcaoUsuario = ObterOpcaoUsuario();
 			}
 
-			Console.WriteLine("Obrigado por utilizar nossos serviços.");
+			Console.WriteLine("Muito Obrigado.");
 			Console.ReadLine();
         }
 
         private static void ExcluirSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id da Música: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			repositorio.Exclui(indiceSerie);
@@ -53,7 +53,7 @@ namespace DIO.Series
 
         private static void VisualizarSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id da Música: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			var serie = repositorio.RetornaPorId(indiceSerie);
@@ -63,7 +63,7 @@ namespace DIO.Series
 
         private static void AtualizarSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id da Música: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
@@ -75,13 +75,13 @@ namespace DIO.Series
 			Console.Write("Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write("Digite o Nome da Música: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write("Digite o Ano da Música: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write("Digite o Álbum da Música: ");
 			string entradaDescricao = Console.ReadLine();
 
 			Serie atualizaSerie = new Serie(id: indiceSerie,
@@ -92,15 +92,15 @@ namespace DIO.Series
 
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
 		}
-        private static void ListarSeries()
+        private static void ListarMusicas()
 		{
-			Console.WriteLine("Listar séries");
+			Console.WriteLine("Listar Músicas");
 
 			var lista = repositorio.Lista();
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhuma série cadastrada.");
+				Console.WriteLine("Nenhuma Música Cadastrada.");
 				return;
 			}
 
@@ -114,7 +114,7 @@ namespace DIO.Series
 
         private static void InserirSerie()
 		{
-			Console.WriteLine("Inserir nova série");
+			Console.WriteLine("Inserir Nova Música");
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
@@ -122,16 +122,16 @@ namespace DIO.Series
 			{
 				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
 			}
-			Console.Write("Digite o gênero entre as opções acima: ");
+			Console.Write("Digite o Estilo entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write("Digite o Nome da Música: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write("Digite o Ano da Música: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write("Digite o Álbum da Música: ");
 			string entradaDescricao = Console.ReadLine();
 
 			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
@@ -146,14 +146,14 @@ namespace DIO.Series
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("DIO Séries a seu dispor!!!");
+			Console.WriteLine("Just Music a seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
-			Console.WriteLine("1- Listar séries");
-			Console.WriteLine("2- Inserir nova série");
-			Console.WriteLine("3- Atualizar série");
-			Console.WriteLine("4- Excluir série");
-			Console.WriteLine("5- Visualizar série");
+			Console.WriteLine("1- Listar Músicas");
+			Console.WriteLine("2- Inserir Nova Música");
+			Console.WriteLine("3- Atualizar Música");
+			Console.WriteLine("4- Excluir Música");
+			Console.WriteLine("5- Visualizar Música");
 			Console.WriteLine("C- Limpar Tela");
 			Console.WriteLine("X- Sair");
 			Console.WriteLine();

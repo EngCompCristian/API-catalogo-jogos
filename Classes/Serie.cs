@@ -26,10 +26,10 @@ namespace DIO.Series
 		{
 			// Environment.NewLine https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netcore-3.1
             string retorno = "";
-            retorno += "Gênero: " + this.Genero + Environment.NewLine;
-            retorno += "Titulo: " + this.Titulo + Environment.NewLine;
-            retorno += "Descrição: " + this.Descricao + Environment.NewLine;
-            retorno += "Ano de Início: " + this.Ano + Environment.NewLine;
+            retorno += "Gênero da Música: " + this.Genero + Environment.NewLine;
+            retorno += "Nome da Música: " + this.Titulo + Environment.NewLine;
+            retorno += "Album da Música: " + this.Descricao + Environment.NewLine;
+            retorno += "Ano da Música: " + this.Ano + Environment.NewLine;
             retorno += "Excluido: " + this.Excluido;
 			return retorno;
 		}

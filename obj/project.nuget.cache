@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3WyFcI/BoU3Za2tUiX4R+4K7kHCzXVQIza69ip1iywzCSzTrzTqamxzC/Pb36AYL40/RBFzdUbcDpzWBCtXGJQ==",
+  "dgSpecHash": "CJ+dbWDg7K2DbAEynTV5IT2xEMsEAEqR5bdMcbWbIbD3R/NCnYosqvjE5Je5U7sh33VjbDb+EszO3L0FayRG8g==",
   "success": true,
-  "projectFilePath": "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj",
+  "projectFilePath": "C:\\Users\\victo\\Documents\\GitHub\\just-music-dotnet\\DIO.Series.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
